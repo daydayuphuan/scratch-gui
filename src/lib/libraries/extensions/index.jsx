@@ -24,6 +24,11 @@ import microbitInsetIconURL from './microbit/microbit-small.svg';
 import microbitConnectionIconURL from './microbit/microbit-illustration.svg';
 import microbitConnectionSmallIconURL from './microbit/microbit-small.svg';
 
+import matatabotIconURL from './matatabot/matatabot.png';
+import matatabotInsetIconURL from './matatabot/matatabot-small.svg';
+import matatabotConnectionIconURL from './matatabot/matatabot-illustration.svg';
+import matatabotConnectionSmallIconURL from './matatabot/matatabot-small.svg';
+
 import ev3IconURL from './ev3/ev3.png';
 import ev3InsetIconURL from './ev3/ev3-small.svg';
 import ev3ConnectionIconURL from './ev3/ev3-hub-illustration.svg';
@@ -195,6 +200,36 @@ export default [
             />
         ),
         helpLink: 'https://scratch.mit.edu/microbit'
+    },
+    {
+        name: 'MatataBot',
+        extensionId: 'matatabot',
+        collaborator: 'matatalab',
+        iconURL: matatabotIconURL,
+        insetIconURL: matatabotInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage="Connect your projects with the MatataBot."
+                description="Description for the 'MatataBot' extension"
+                id="gui.extension.matatabot.description"
+            />
+        ),
+        featured: true,
+        disabled: false,
+        bluetoothRequired: true,
+        internetConnectionRequired: true,
+        launchPeripheralConnectionFlow: true,
+        useAutoScan: false,
+        connectionIconURL: matatabotConnectionIconURL,
+        connectionSmallIconURL: matatabotConnectionSmallIconURL,
+        connectingMessage: (
+            <FormattedMessage
+                defaultMessage="Connecting"
+                description="Message to help people connect to their MatataBot."
+                id="gui.extension.matatabot.connectingMessage"
+            />
+        ),
+        helpLink: 'http://edu.matatalab.com/'
     },
     {
         name: 'LEGO MINDSTORMS EV3',
