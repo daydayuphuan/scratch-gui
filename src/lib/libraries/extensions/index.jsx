@@ -29,6 +29,11 @@ import matatabotInsetIconURL from './matatabot/matatabot-small.svg';
 import matatabotConnectionIconURL from './matatabot/matatabot-illustration.svg';
 import matatabotConnectionSmallIconURL from './matatabot/matatabot-small.svg';
 
+import matataconIconURL from './matatacon/matatacon.png';
+import matataconInsetIconURL from './matatacon/matatacon-small.svg';
+import matataconConnectionIconURL from './matatacon/matatacon-illustration.svg';
+import matataconConnectionSmallIconURL from './matatacon/matatacon-small.svg';
+
 import ev3IconURL from './ev3/ev3.png';
 import ev3InsetIconURL from './ev3/ev3-small.svg';
 import ev3ConnectionIconURL from './ev3/ev3-hub-illustration.svg';
@@ -227,6 +232,36 @@ export default [
                 defaultMessage="Connecting"
                 description="Message to help people connect to their MatataBot."
                 id="gui.extension.matatabot.connectingMessage"
+            />
+        ),
+        helpLink: 'http://edu.matatalab.com/'
+    },
+    {
+        name: 'MatataCon',
+        extensionId: 'matatacon',
+        collaborator: 'matatalab',
+        iconURL: matataconIconURL,
+        insetIconURL: matataconInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage="Connect your projects with the MatataCon."
+                description="Description for the 'MatataCon' extension"
+                id="gui.extension.matatacon.description"
+            />
+        ),
+        featured: true,
+        disabled: false,
+        bluetoothRequired: true,
+        internetConnectionRequired: true,
+        launchPeripheralConnectionFlow: true,
+        useAutoScan: false,
+        connectionIconURL: matataconConnectionIconURL,
+        connectionSmallIconURL: matataconConnectionSmallIconURL,
+        connectingMessage: (
+            <FormattedMessage
+                defaultMessage="Connecting"
+                description="Message to help people connect to their MatataCon."
+                id="gui.extension.matatacon.connectingMessage"
             />
         ),
         helpLink: 'http://edu.matatalab.com/'
