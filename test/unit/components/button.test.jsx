@@ -12,7 +12,7 @@ describe('ButtonComponent', () => {
         expect(component.toJSON()).toMatchSnapshot();
     });
 
-    test('triggers callback when clicked', () => {
+    test('triggers callbacks when clicked', () => {
         const onClick = jest.fn();
         const componentShallowWrapper = shallow(
             <ButtonComponent onClick={onClick} />
