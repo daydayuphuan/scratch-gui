@@ -12,9 +12,7 @@ const messages = defineMessages({
         id: 'gui.matata.firmwareUpdate'
     },
     firmwareUpdateText: {
-        defaultMessage: `检测到当前固件版本号为：10.11.12 
-
-            版本不匹配，需要升级`,
+        defaultMessage: `检测到当前固件版本号为：10.11.12 {br} 版本不匹配，需要升级`,
         description: '',
         id: 'gui.matata.firmwareUpdateText'
     },
