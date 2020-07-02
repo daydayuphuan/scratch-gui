@@ -120,7 +120,11 @@ GUI.defaultProps = {
     onStorageInit: storageInstance => storageInstance.addOfficialScratchWebStores(),
     onProjectLoaded: () => {},
     onUpdateProjectId: () => {},
-    onVmInit: (/* vm */) => {}
+    onVmInit: vm => {
+        // 这里添加默认扩展
+        vm.extensionManager.loadExtensionURL('matatabot');
+        vm.extensionManager.loadExtensionURL('matatacon');
+    }
 };
 
 const mapStateToProps = state => {
