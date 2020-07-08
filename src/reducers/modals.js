@@ -89,7 +89,7 @@ const openConnectionModal = function () {
 const openTipsLibrary = function () {
     return openModal(MODAL_TIPS_LIBRARY);
 };
-const openFirmwareUpdate = function () {
+const openFirmwareUpdateModal = function () {
     return openModal(MODAL_FIRMWARE_UPDATE);
 };
 const closeBackdropLibrary = function () {
@@ -142,7 +142,7 @@ export {
     openTelemetryModal,
     openTipsLibrary,
     openConnectionModal,
-    openFirmwareUpdate,
+    openFirmwareUpdateModal,
     closeBackdropLibrary,
     closeCameraCapture,
     closeCostumeLibrary,

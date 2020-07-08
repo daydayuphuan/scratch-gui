@@ -83,6 +83,8 @@ const AppStateHOC = function (WrappedComponent, localesOnly) {
                 initialState,
                 enhancer
             );
+
+            window.matataStore = this.store;
         }
         componentDidUpdate (prevProps) {
             if (localesOnly) return;

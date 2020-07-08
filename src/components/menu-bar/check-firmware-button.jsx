@@ -6,7 +6,7 @@ import React from 'react';
 import Button from '../button/button.jsx';
 import styles from './check-firmware-button.css';
 
-import {openFirmwareUpdate} from '../../reducers/modals';
+import {openFirmwareUpdateModal} from '../../reducers/modals';
 
 const CheckFirmwareButton = ({className, onClickBtn}) => (
     <Button
@@ -30,7 +30,7 @@ const mapStateToProps = () => ({});
 
 const mapDispatchToProps = dispatch => ({
     onClickBtn: () => {
-        dispatch(openFirmwareUpdate());
+        dispatch(openFirmwareUpdateModal());
     }
 });
 
