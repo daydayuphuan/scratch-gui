@@ -168,6 +168,14 @@ module.exports = [
                 to: 'static'
             }]),
             new CopyWebpackPlugin([{
+                from: 'node_modules/scratch-blocks',
+                to: 'static/scratch-blocks'
+            }]),
+            new CopyWebpackPlugin([{
+                from: 'src/lib/google-closure-library',
+                to: 'static/scratch-blocks/node_modules/google-closure-library'
+            }]),
+            new CopyWebpackPlugin([{
                 from: 'node_modules/scratch-blocks/media',
                 to: 'static/blocks-media'
             }]),

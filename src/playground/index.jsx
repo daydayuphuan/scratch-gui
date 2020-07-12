@@ -25,6 +25,9 @@ if (supportedBrowser()) {
     // require needed here to avoid importing unsupported browser-crashing code
     // at the top level
     require('./render-gui.jsx').default(appTarget);
+    setTimeout(() => {
+        require('../lib/field_face');
+    }, 500);
 
 } else {
     BrowserModalComponent.setAppElement(appTarget);
