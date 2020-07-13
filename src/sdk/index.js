@@ -2,7 +2,7 @@ import {openFirmwareUpdateModal, closeFirmwareUpdateModal} from '../reducers/mod
 
 class Matata {
     constructor () {
-        this.version = 'xxx';
+        this.version = '0.1.0';
     }
 
     showFirmwareModal () {
