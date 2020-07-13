@@ -25,9 +25,7 @@ if (supportedBrowser()) {
     // require needed here to avoid importing unsupported browser-crashing code
     // at the top level
     require('./render-gui.jsx').default(appTarget);
-    setTimeout(() => {
-        require('../lib/field_face');
-    }, 500);
+    require('../lib/scratch-extends/scratch-blocks/field_face');
 
 } else {
     BrowserModalComponent.setAppElement(appTarget);

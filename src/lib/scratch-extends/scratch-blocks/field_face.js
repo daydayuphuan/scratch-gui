@@ -26,7 +26,7 @@
  */
 
 import Blockly from 'scratch-blocks';
-const goog = window.goog;
+import {googInherits} from '../util';
 
 /**
  * Class for a matrix field.
@@ -117,7 +117,7 @@ Blockly.FieldFace = function (matrix) {
      */
     this.matrixReleaseWrapper_ = null;
 };
-goog.inherits(Blockly.FieldFace, Blockly.Field);
+googInherits(Blockly.FieldFace, Blockly.Field);
 
 /**
  * Construct a FieldFace from a JSON arg object.
