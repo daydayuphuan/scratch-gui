@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import UpdateTipComponent from '../components/update-tip/update-tip.jsx';
+import FirmwareUpdateTipComponent from '../components/firmware-update-tip/firmware-update-tip.jsx';
 
 import {
     closeFirmwareUpdateModal
@@ -25,8 +25,9 @@ class UpdateTip extends React.Component {
     }
     render () {
         return (
-            <UpdateTipComponent
+            <FirmwareUpdateTipComponent
                 onCancel={this.handleCancel}
+                {...this.props}
             />
         );
     }
@@ -36,7 +37,10 @@ UpdateTip.propTypes = {
     onClose: PropTypes.func
 };
 
-const mapStateToProps = () => ({});
+const mapStateToProps = state => ({
+    deviceVersion: state.scratchGui.device.deviceVersion,
+    deviceType: state.scratchGui.device.deviceType
+});
 
 const mapDispatchToProps = dispatch => ({
     onClose: () => {

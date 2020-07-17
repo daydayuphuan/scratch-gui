@@ -11,6 +11,7 @@ import hoveredTargetReducer, {hoveredTargetInitialState} from './hovered-target'
 import menuReducer, {menuInitialState} from './menus';
 import micIndicatorReducer, {micIndicatorInitialState} from './mic-indicator';
 import modalReducer, {modalsInitialState} from './modals';
+import deviceReducer, {deviceInitialState} from './device';
 import modeReducer, {modeInitialState} from './mode';
 import monitorReducer, {monitorsInitialState} from './monitors';
 import monitorLayoutReducer, {monitorLayoutInitialState} from './monitor-layout';
@@ -41,6 +42,7 @@ const guiInitialState = {
     customProcedures: customProceduresInitialState,
     editorTab: editorTabInitialState,
     mode: modeInitialState,
+    device: deviceInitialState,
     hoveredTarget: hoveredTargetInitialState,
     stageSize: stageSizeInitialState,
     menus: menuInitialState,
@@ -144,6 +146,7 @@ const guiReducer = combineReducers({
     menus: menuReducer,
     micIndicator: micIndicatorReducer,
     modals: modalReducer,
+    device: deviceReducer,
     monitors: monitorReducer,
     monitorLayout: monitorLayoutReducer,
     projectChanged: projectChangedReducer,
