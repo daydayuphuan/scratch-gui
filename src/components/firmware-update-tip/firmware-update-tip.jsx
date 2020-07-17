@@ -29,6 +29,9 @@ const messages = defineMessages({
 });
 
 const FirmareUpdateTip = ({intl, ...props}) => {
+    // 去升级固件的链接地址
+    const updateLink = 'https://matatalab.com/';
+    // 弹窗中的文字内容
     const content =
         `${intl.formatMessage(messages.firmwareUpdatePreLable) +
             props.deviceVersion} (${props.deviceType}) \n\n 
@@ -52,7 +55,7 @@ const FirmareUpdateTip = ({intl, ...props}) => {
 
                     <p className={styles.linkWrapper}>
                         <a
-                            href="https://matatalab.com/"
+                            href={updateLink}
                             className={styles.mainButton}
                             rel="noreferrer"
                             target="_blank"
