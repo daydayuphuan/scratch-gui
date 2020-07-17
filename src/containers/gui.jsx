@@ -122,7 +122,6 @@ GUI.defaultProps = {
     onProjectLoaded: () => {},
     onUpdateProjectId: () => {},
     onVmInit: vm => {
-        // 这里添加默认扩展
         vm.extensionManager.loadExtensionURL('matatabot');
         vm.extensionManager.loadExtensionURL('matatacon');
     }
