@@ -10,7 +10,7 @@ const config = {
     bgimg: {name: 'matataconn.png', url: 'static/matataconn.png'},
     boxspacing: 20,
     colorIndex: 1,
-    colors: ['#9b9b9b', '#ff5000', '#ffb200', '#fffa41', '#85ff00', '#00ffc6', '#5ba6ff', '#ff88f0', '#fff'],
+    colors: ['#ffffff', '#ff0000', '#ff8000', '#ffff00', '#00ff00', '#00ffff', '#0000ff', '#8000ff', '#000000'],
     columns: 16,
     count: 12,
     create_time: 1584582917,
