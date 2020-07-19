@@ -1494,6 +1494,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _containers_gui_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../containers/gui.jsx */ "./src/containers/gui.jsx");
 /* harmony import */ var _lib_hash_parser_hoc_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../lib/hash-parser-hoc.jsx */ "./src/lib/hash-parser-hoc.jsx");
 /* harmony import */ var _lib_log_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../lib/log.js */ "./src/lib/log.js");
+/* harmony import */ var _config_domain_json__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../config/domain.json */ "./src/config/domain.json");
+var _config_domain_json__WEBPACK_IMPORTED_MODULE_7___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../config/domain.json */ "./src/config/domain.json", 1);
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 
@@ -1504,8 +1506,9 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
 
 
+
 var onClickLogo = function onClickLogo() {
-  window.location = 'https://matatalab.com';
+  window.location = _config_domain_json__WEBPACK_IMPORTED_MODULE_7__.mata_home_link;
 };
 
 var handleTelemetryModalCancel = function handleTelemetryModalCancel() {
