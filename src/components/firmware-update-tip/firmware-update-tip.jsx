@@ -23,7 +23,7 @@ const messages = defineMessages({
         id: 'gui.matata.firmwareUpdatePostLable'
     },
     firmwareUpdateButtonText: {
-        defaultMessage: 'Go to upgraded',
+        defaultMessage: 'Go to upgrade',
         description: '',
         id: 'gui.matata.firmwareUpdateButtonText'
     }
