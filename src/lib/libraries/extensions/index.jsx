@@ -55,6 +55,7 @@ import gdxforIconURL from './gdxfor/gdxfor.png';
 import gdxforInsetIconURL from './gdxfor/gdxfor-small.svg';
 import gdxforConnectionIconURL from './gdxfor/gdxfor-illustration.svg';
 import gdxforConnectionSmallIconURL from './gdxfor/gdxfor-small.svg';
+import domain from '../../../config/domain.json';
 
 export default [
     {
@@ -234,7 +235,7 @@ export default [
                 id="gui.extension.matatabot.connectingMessage"
             />
         ),
-        helpLink: 'https://github.com/YanMinge/scratch-doc/blob/master/matatabot_scratch_link_installation.md'
+        helpLink: domain.matatbot_help_link
     },
     {
         name: 'MatataCon',
@@ -264,7 +265,7 @@ export default [
                 id="gui.extension.matatacon.connectingMessage"
             />
         ),
-        helpLink: 'https://github.com/YanMinge/scratch-doc/blob/master/matatacon_scratch_link_installation.md'
+        helpLink: domain.matatcon_help_link
     },
     {
         name: 'LEGO MINDSTORMS EV3',

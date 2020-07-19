@@ -225,3 +225,10 @@
     margin: 0.5rem;
     vertical-align: middle;
 }
+
+.menu-bar-item a {
+    text-decoration: none;
+    color: #fff!important;
+    display: inline-block;
+    padding: 0 10px;
+}

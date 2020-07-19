@@ -11,7 +11,7 @@ import VM from 'scratch-vm';
 
 import Box from '../box/box.jsx';
 import Button from '../button/button.jsx';
-import CheckFirmwareButton from './check-firmware-button.jsx';
+// import CheckFirmwareButton from './check-firmware-button.jsx';
 import {ComingSoonTooltip} from '../coming-soon/coming-soon.jsx';
 import Divider from '../divider/divider.jsx';
 import LanguageSelector from '../../containers/language-selector.jsx';
@@ -24,6 +24,7 @@ import SB3Downloader from '../../containers/sb3-downloader.jsx';
 import DeletionRestorer from '../../containers/deletion-restorer.jsx';
 import TurboMode from '../../containers/turbo-mode.jsx';
 import MenuBarHOC from '../../containers/menu-bar-hoc.jsx';
+import domain from '../../config/domain.json';
 
 import {openTipsLibrary} from '../../reducers/modals';
 import {setPlayer} from '../../reducers/mode';
@@ -76,6 +77,11 @@ const ariaMessages = defineMessages({
     tutorials: {
         id: 'gui.menuBar.tutorialsLibrary',
         defaultMessage: 'Tutorials',
+        description: 'accessibility text for the tutorials button'
+    },
+    mataTutorials: {
+        id: 'gui.menuBar.mataTutorialsLink',
+        defaultMessage: 'Mata Tutorials',
         description: 'accessibility text for the tutorials button'
     }
 });
@@ -500,9 +506,15 @@ class MenuBar extends React.Component {
                         />
                     ) : null)}
 
-                    <div
+                    {/* <div
                         className={classNames(styles.menuBarItem, styles.hoverable)}
-                    ><CheckFirmwareButton /> </div>
+                    ><CheckFirmwareButton /> </div> */}
+                    <div className={classNames(styles.menuBarItem, styles.hoverable)}>
+                        <a
+                            href={domain.mata_learning_center}
+                            rel="noreferrer"
+                            target="_blank">{this.props.intl.formatMessage(ariaMessages.mataTutorials)}</a>
+                    </div>
                 </div>
             </Box>
         );

@@ -4,6 +4,7 @@ import {defineMessages, injectIntl, intlShape} from 'react-intl';
 import Box from '../box/box.jsx';
 import Modal from '../../containers/modal.jsx';
 import styles from './firmware-update-tip.css';
+import domain from '../../config/domain.json';
 
 const messages = defineMessages({
     firmwareUpdateModalTitle: {
@@ -29,8 +30,6 @@ const messages = defineMessages({
 });
 
 const FirmareUpdateTip = ({intl, ...props}) => {
-    // 去升级固件的链接地址
-    const updateLink = 'https://matatalab.com/';
     // 弹窗中的文字内容
     const content =
         `${intl.formatMessage(messages.firmwareUpdatePreLable) +
@@ -55,7 +54,7 @@ const FirmareUpdateTip = ({intl, ...props}) => {
 
                     <p className={styles.linkWrapper}>
                         <a
-                            href={updateLink}
+                            href={domain.mata_device_update_link}
                             className={styles.mainButton}
                             rel="noreferrer"
                             target="_blank"
