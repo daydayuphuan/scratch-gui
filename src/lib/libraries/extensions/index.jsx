@@ -234,7 +234,7 @@ export default [
                 id="gui.extension.matatabot.connectingMessage"
             />
         ),
-        helpLink: 'http://edu.matatalab.com/'
+        helpLink: 'https://github.com/YanMinge/scratch-doc/blob/master/matatabot_scratch_link_installation.md'
     },
     {
         name: 'MatataCon',
@@ -264,7 +264,7 @@ export default [
                 id="gui.extension.matatacon.connectingMessage"
             />
         ),
-        helpLink: 'http://edu.matatalab.com/'
+        helpLink: 'https://github.com/YanMinge/scratch-doc/blob/master/matatacon_scratch_link_installation.md'
     },
     {
         name: 'LEGO MINDSTORMS EV3',

@@ -6,7 +6,7 @@ const UPDATE_DEVICE_INFO = 'device/UPDATE_DEVICE_INFO';
 
 const initialState = {
     deviceType: 'matatabot',
-    deviceVersion: 'hhah'
+    deviceVersion: ''
 };
 
 const reducer = function (state, action) {
