@@ -8,22 +8,22 @@ import domain from '../../config/domain.json';
 
 const messages = defineMessages({
     firmwareUpdateModalTitle: {
-        defaultMessage: 'Matata 固件检查提示',
+        defaultMessage: 'Device firmware version check',
         description: '',
         id: 'gui.matata.firmwareUpdate'
     },
     firmwareUpdatePreLable: {
-        defaultMessage: '检测到当前固件版本号为：',
+        defaultMessage: 'The version get from current hardware: ',
         description: '',
         id: 'gui.matata.firmwareUpdatePreLable'
     },
     firmwareUpdatePostLable: {
-        defaultMessage: '版本不匹配，需要升级',
+        defaultMessage: 'The firmware version does not match the version supported by the extension, needs to be upgraded',
         description: '',
         id: 'gui.matata.firmwareUpdatePostLable'
     },
     firmwareUpdateButtonText: {
-        defaultMessage: '去升级',
+        defaultMessage: 'Go to upgraded',
         description: '',
         id: 'gui.matata.firmwareUpdateButtonText'
     }

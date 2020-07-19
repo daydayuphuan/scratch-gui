@@ -81,7 +81,7 @@ const ariaMessages = defineMessages({
     },
     mataTutorials: {
         id: 'gui.menuBar.mataTutorialsLink',
-        defaultMessage: 'Mata Tutorials',
+        defaultMessage: 'Matatalab Tutorials',
         description: 'accessibility text for the tutorials button'
     }
 });
