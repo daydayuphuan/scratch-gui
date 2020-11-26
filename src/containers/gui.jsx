@@ -38,6 +38,7 @@ import cloudManagerHOC from '../lib/cloud-manager-hoc.jsx';
 
 import GUIComponent from '../components/gui/gui.jsx';
 import {setIsScratchDesktop} from '../lib/isScratchDesktop.js';
+import '../sdk/index';
 
 class GUI extends React.Component {
     componentDidMount () {
@@ -120,7 +121,10 @@ GUI.defaultProps = {
     onStorageInit: storageInstance => storageInstance.addOfficialScratchWebStores(),
     onProjectLoaded: () => {},
     onUpdateProjectId: () => {},
-    onVmInit: (/* vm */) => {}
+    onVmInit: vm => {
+        vm.extensionManager.loadExtensionURL('matatabot');
+        vm.extensionManager.loadExtensionURL('matatacon');
+    }
 };
 
 const mapStateToProps = state => {
@@ -132,6 +136,7 @@ const mapStateToProps = state => {
         blocksTabVisible: state.scratchGui.editorTab.activeTabIndex === BLOCKS_TAB_INDEX,
         cardsVisible: state.scratchGui.cards.visible,
         connectionModalVisible: state.scratchGui.modals.connectionModal,
+        firmwareUpdateModalVisible: state.scratchGui.modals.firmwareUpdateModal,
         costumeLibraryVisible: state.scratchGui.modals.costumeLibrary,
         costumesTabVisible: state.scratchGui.editorTab.activeTabIndex === COSTUMES_TAB_INDEX,
         error: state.scratchGui.projectState.error,

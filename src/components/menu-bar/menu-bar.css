@@ -41,7 +41,8 @@
 }
 
 .scratch-logo {
-    height:  1.6rem;
+    /* height:  1.6rem; */
+    height:  1.3rem;
     vertical-align: middle;
 }
 
@@ -223,4 +224,11 @@
     height: 1.25rem;
     margin: 0.5rem;
     vertical-align: middle;
+}
+
+.menu-bar-item a {
+    text-decoration: none;
+    color: #fff!important;
+    display: inline-block;
+    padding: 0 10px;
 }

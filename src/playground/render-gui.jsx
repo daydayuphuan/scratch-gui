@@ -6,9 +6,10 @@ import AppStateHOC from '../lib/app-state-hoc.jsx';
 import GUI from '../containers/gui.jsx';
 import HashParserHOC from '../lib/hash-parser-hoc.jsx';
 import log from '../lib/log.js';
+import domain from '../config/domain.json';
 
 const onClickLogo = () => {
-    window.location = 'https://scratch.mit.edu';
+    window.location = domain.mata_home_link;
 };
 
 const handleTelemetryModalCancel = () => {

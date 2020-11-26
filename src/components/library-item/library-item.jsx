@@ -4,7 +4,6 @@ import React from 'react';
 
 import Box from '../box/box.jsx';
 import PlayButton from '../../containers/play-button.jsx';
-import ScratchImage from '../scratch-image/scratch-image.jsx';
 import styles from './library-item.css';
 import classNames from 'classnames';
 
@@ -37,12 +36,10 @@ class LibraryItemComponent extends React.PureComponent {
                             />
                         </div>
                     ) : null}
-                    {this.props.iconSource ? (
-                        <ScratchImage
-                            className={styles.featuredImage}
-                            imageSource={this.props.iconSource}
-                        />
-                    ) : null}
+                    <img
+                        className={styles.featuredImage}
+                        src={this.props.iconURL}
+                    />
                 </div>
                 {this.props.insetIconURL ? (
                     <div className={styles.libraryItemInsetImageContainer}>
@@ -130,9 +127,9 @@ class LibraryItemComponent extends React.PureComponent {
                         onMouseEnter={this.props.showPlayButton ? this.props.onMouseEnter : null}
                         onMouseLeave={this.props.showPlayButton ? this.props.onMouseLeave : null}
                     >
-                        <ScratchImage
+                        <img
                             className={styles.libraryItemImage}
-                            imageSource={this.props.iconSource}
+                            src={this.props.iconURL}
                         />
                     </Box>
                 </Box>
@@ -162,7 +159,7 @@ LibraryItemComponent.propTypes = {
     extensionId: PropTypes.string,
     featured: PropTypes.bool,
     hidden: PropTypes.bool,
-    iconSource: ScratchImage.ImageSourcePropType,
+    iconURL: PropTypes.string,
     insetIconURL: PropTypes.string,
     internetConnectionRequired: PropTypes.bool,
     isPlaying: PropTypes.bool,
