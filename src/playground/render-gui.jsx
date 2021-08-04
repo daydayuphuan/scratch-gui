@@ -76,8 +76,9 @@ export default appTarget => {
             /> :
             <WrappedGui
                 canEditTitle
-                backpackVisible
-                showComingSoon
+                showComingSoon={false}
+                // 关闭背包的显示
+                backpackVisible={false}
                 backpackHost={backpackHost}
                 canSave={false}
                 onClickLogo={onClickLogo}
