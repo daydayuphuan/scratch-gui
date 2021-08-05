@@ -68,6 +68,7 @@ import aboutIcon from './icon--about.svg';
 import mataLogo from './mata-logo.png';
 
 import sharedMessages from '../../lib/shared-messages';
+import Input from '../forms/input.jsx';
 
 const ariaMessages = defineMessages({
     language: {
@@ -158,6 +159,8 @@ class MenuBar extends React.Component {
     constructor (props) {
         super(props);
         bindAll(this, [
+            'handleProjectUrlChange',
+            'handleClickOpen',
             'handleClickNew',
             'handleClickRemix',
             'handleClickSave',
@@ -170,12 +173,43 @@ class MenuBar extends React.Component {
             'getSaveToComputerHandler',
             'restoreOptionMessage'
         ]);
+        this.state = {
+            loading: false,
+            projectUrl: ''
+        };
     }
     componentDidMount () {
         document.addEventListener('keydown', this.handleKeyPress);
     }
     componentWillUnmount () {
         document.removeEventListener('keydown', this.handleKeyPress);
+    }
+    handleProjectUrlChange (e) {
+        this.setState({
+            projectUrl: e.target.value
+        });
+    }
+    handleClickOpen () {
+        const {vm} = this.props;
+        const {projectUrl} = this.state;
+        // TODO: 验证 URL
+        if (!projectUrl) {
+            return;
+        }
+        this.setState({loading: true});
+        // const projectUrl = `https://dev-res-cn.oss-cn-shenzhen.aliyuncs.com/An%20Outdoor%20Adventure....sb3`;
+        fetch(projectUrl, {responseType: 'arraybuffer'})
+            .then(res => res.arrayBuffer())
+            .then(res => vm.loadProject(res))
+            .then(() => {
+                // TODO: 加载成功
+            })
+            .catch(() => {
+                // TODO: 加载失败
+            })
+            .finally(() => {
+                this.setState({loading: false});
+            });
     }
     handleClickNew () {
         // if the project is dirty, and user owns the project, we will autosave.
@@ -352,6 +386,13 @@ class MenuBar extends React.Component {
                 defaultMessage="Remix"
                 description="Menu bar item for remixing"
                 id="gui.menuBar.remix"
+            />
+        );
+        const openProjectMessage = (
+            <FormattedMessage
+                defaultMessage="Open"
+                description="Menu bar item for creating a open project"
+                id="gui.menuBar.open"
             />
         );
         const newProjectMessage = (
@@ -545,7 +586,6 @@ class MenuBar extends React.Component {
                             username={this.props.authorUsername}
                         />
                     ) : null)}
-
                     {/* <div
                         className={classNames(styles.menuBarItem, styles.hoverable)}
                     ><CheckFirmwareButton /> </div> */}
@@ -553,8 +593,20 @@ class MenuBar extends React.Component {
                         <a
                             href={domain.mata_learning_center}
                             rel="noreferrer"
-                            target="_blank">{this.props.intl.formatMessage(ariaMessages.mataTutorials)}</a>
+                            target="_blank"
+                        >{this.props.intl.formatMessage(ariaMessages.mataTutorials)}</a>
                     </div>
+                    {/* TODO: 打开项目 DEMO */}
+                    <Divider className={classNames(styles.divider)} />
+                    <Input
+                        placeholder="请输入项目链接"
+                        value={this.state.projectUrl}
+                        onChange={this.handleProjectUrlChange}
+                    />
+                    <Button
+                        onClick={this.handleClickOpen}
+                        disabled={this.state.loading}
+                    >{openProjectMessage}</Button>
                 </div>
             </Box>
         );
